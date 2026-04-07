@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="src/styles/dashboard.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="stylesheet" href="src/styles/advanced-pages.css">
+    <link rel="stylesheet" href="src/styles/mobile-responsive.css">
 </head>
 <body>
     <div id="root"></div>
@@ -34,6 +35,10 @@
     <script src="src/utils/activity-calculator.js"></script>
     <script src="src/utils/insights-engine.js"></script>
     <script src="src/utils/goals-manager.js"></script>
+    
+    <!-- Performance & UI Utilities -->
+    <script src="src/utils/performance-utils.js"></script>
+    <script src="src/utils/micro-interactions.js"></script>
     
     <!-- Hooks -->
     <script src="src/hooks/useTheme.js"></script>
@@ -65,8 +70,15 @@
     <script src="src/components/InsightsPage.js"></script>
     <script src="src/components/GoalsPage.js"></script>
     
+    <!-- Mobile Components -->
+    <script src="src/components/ResponsiveLayout.js"></script>
+    <script src="src/components/MobileBottomNav.js"></script>
+    
     <!-- Layout & App -->
     <script src="src/components/MainLayout.js"></script>
     <script src="src/App.js"></script>
+    
+    <!-- Testing Suite -->
+    <script src="test-runner.js"></script>
 </body>
 </html>
