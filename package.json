@@ -1,0 +1,25 @@
+{
+  "name": "focussense",
+  "version": "1.0.0",
+  "description": "Premium Focus Management Web Application",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "python -m http.server 8000",
+    "build": "echo 'No build required - using vanilla React'",
+    "serve": "npx serve -s . -l 3000"
+  },
+  "keywords": [
+    "focus",
+    "productivity",
+    "premium",
+    "react"
+  ],
+  "author": "FocusSense Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/focussense/app"
+  }
+}

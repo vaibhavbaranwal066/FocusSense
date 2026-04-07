@@ -1,0 +1,154 @@
+/* ===================================
+   Theme Styles
+   =================================== */
+
+/* Dark Theme (default) */
+:root {
+    color-scheme: dark;
+}
+
+/* Light Theme */
+body.light-theme {
+    color-scheme: light;
+    background-color: #FFFFFF;
+    color: #1F2937;
+}
+
+body.light-theme .app-navbar {
+    background-color: #FFFFFF;
+    border-bottom-color: #E2E8F0;
+}
+
+body.light-theme .app-sidebar {
+    background-color: #F8FAFC;
+    border-right-color: #E2E8F0;
+}
+
+body.light-theme .app-content {
+    background-color: #FFFFFF;
+}
+
+body.light-theme .navbar-search {
+    background-color: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+body.light-theme .nav-item {
+    color: #6B7280;
+}
+
+body.light-theme .nav-item:hover {
+    background-color: #E5E7EB;
+    color: #1F2937;
+}
+
+body.light-theme .nav-item.active {
+    background-color: var(--primary);
+    color: #FFFFFF;
+}
+
+body.light-theme .sidebar-header {
+    border-bottom-color: #E2E8F0;
+}
+
+body.light-theme .nav-section-title {
+    color: #9CA3AF;
+}
+
+body.light-theme .logo {
+    color: #1F2937;
+}
+
+body.light-theme .text-primary {
+    color: #1F2937;
+}
+
+body.light-theme .text-secondary {
+    color: #6B7280;
+}
+
+body.light-theme .text-tertiary {
+    color: #9CA3AF;
+}
+
+/* Theme Toggle Button Specific Styling */
+.theme-toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-size: var(--font-size-lg);
+}
+
+.theme-toggle:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--primary);
+}
+
+.theme-icon {
+    transition: all var(--transition-base);
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.theme-icon.fade-out {
+    opacity: 0;
+    transform: rotate(-180deg);
+}
+
+.theme-icon.fade-in {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Transition for theme switch */
+body {
+    transition: background-color var(--transition-base),
+                color var(--transition-base);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color based on theme */
+::selection {
+    background-color: var(--primary);
+    color: var(--bg-light);
+}
+
+body.light-theme ::selection {
+    background-color: var(--primary);
+    color: var(--bg-light);
+}
+
+/* Placeholder color consistency */
+::-webkit-input-placeholder {
+    color: var(--text-tertiary);
+}
+:-moz-placeholder {
+    color: var(--text-tertiary);
+}
+::-moz-placeholder {
+    color: var(--text-tertiary);
+}
+:-ms-input-placeholder {
+    color: var(--text-tertiary);
+}
+
+/* Focus Visible */
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+button:focus-visible {
+    outline-offset: -2px;
+}
