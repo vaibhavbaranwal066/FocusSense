@@ -2,7 +2,7 @@
 
 **Last Updated**: April 7, 2026  
 **Status**: ✅ Production Ready  
-**Total Files**: 43  
+**Total Files**: 49  
 
 ---
 
@@ -20,7 +20,10 @@ FocusSense/
 ├── 📄 DASHBOARD_QUICK_REF.md         Quick reference
 ├── 📄 DASHBOARD_DEV_GUIDE.md         Developer guide
 ├── 📄 DASHBOARD_UPDATE.md            What's new
-├── 📄 COMPLETE_DASHBOARD_SUMMARY.md  This file
+├── 📄 COMPLETE_DASHBOARD_SUMMARY.md  Dashboard summary
+├── 📄 ACTIVITY_TRACKING_GUIDE.md     Tracking documentation ⭐
+├── 📄 ACTIVITY_TRACKING_QUICK_REF.md Quick reference ⭐
+├── 📄 ACTIVITY_TRACKING_IMPLEMENTATION.md Implementation details ⭐
 │
 └── 📁 src/
 ```
@@ -38,6 +41,9 @@ src/
 │   ├── 📄 Navbar.js                  Top navigation bar
 │   ├── 📄 MainLayout.js              Content routing
 │   │
+│   ├── ⭐ Tracking Components:
+│   ├── 📄 ActivityTracker.js         Event listener & tracking ⭐
+│   │
 │   ├── ⭐ Dashboard Components:
 │   ├── 📄 CircularProgress.js        Animated progress circle
 │   ├── 📄 StatCard.js                Stat card component
@@ -47,13 +53,15 @@ src/
 │   └── 📄 DashboardPage.js           Dashboard container
 │
 ├── 📁 hooks/
-│   └── 📄 useTheme.js                Theme management hook
+│   ├── 📄 useTheme.js                Theme management hook
+│   └── 📄 useTracking.js             Activity tracking hook ⭐
 │
 ├── 📁 utils/
 │   ├── 📄 theme-manager.js           Theme persistence logic
 │   ├── 📄 helpers.js                 Utility functions
 │   ├── 📄 constants.js               App constants
-│   └── 📄 api-service.js             API client (ready for use)
+│   ├── 📄 api-service.js             API client (ready for use)
+│   └── 📄 activity-calculator.js     Focus score calculations ⭐
 │
 ├── 📁 pages/                         Reserved for future pages
 │
@@ -72,31 +80,34 @@ src/
 ## 📊 File Statistics
 
 ### **Core Files**
-- `index.html` - 75 lines
+- `index.html` - 85 lines
 - `package.json` - 25 lines
 - `App.js` - 40 lines
 
-### **Components** (970 lines total)
+### **Components** (1,120 lines total)
 - `Sidebar.js` - 120 lines
 - `Navbar.js` - 140 lines
 - `MainLayout.js` - 130 lines
+- `ActivityTracker.js` - 150 lines ⭐
 - `CircularProgress.js` - 80 lines
 - `StatCard.js` - 150 lines
 - `LineChart.js` - 180 lines
 - `Heatmap.js` - 160 lines
-- `InsightCard.js` - 80 lines ✅
-- `DashboardPage.js` - 180 lines
+- `InsightCard.js` - 80 lines
+- `DashboardPage.js` - 200 lines
 
-### **Hooks** (50 lines)
+### **Hooks** (500 lines)
 - `useTheme.js` - 50 lines
+- `useTracking.js` - 450 lines ⭐
 
-### **Utilities** (650 lines)
+### **Utilities** (1,150 lines)
 - `theme-manager.js` - 80 lines
 - `helpers.js` - 150 lines
 - `constants.js` - 100 lines
 - `api-service.js` - 180 lines
+- `activity-calculator.js` - 500 lines ⭐
 
-### **Styles** (2500+ lines)
+### **Styles** (2,500+ lines)
 - `global.css` - 400 lines
 - `layout.css` - 350 lines
 - `components.css` - 600 lines
@@ -105,7 +116,7 @@ src/
 - `dashboard.css` - 500 lines
 - `responsive.css` - 400 lines
 
-### **Documentation** (5000+ lines)
+### **Documentation** (8,000+ lines)
 - `README.md` - 300 lines
 - `GETTING_STARTED.md` - 300 lines
 - `PROJECT_SUMMARY.md` - 400 lines
@@ -114,6 +125,9 @@ src/
 - `DASHBOARD_DEV_GUIDE.md` - 800 lines
 - `DASHBOARD_UPDATE.md` - 400 lines
 - `COMPLETE_DASHBOARD_SUMMARY.md` - 800 lines
+- `ACTIVITY_TRACKING_GUIDE.md` - 500 lines ⭐
+- `ACTIVITY_TRACKING_QUICK_REF.md` - 300 lines ⭐
+- `ACTIVITY_TRACKING_IMPLEMENTATION.md` - 500 lines ⭐
 
 ---
 
@@ -403,11 +417,11 @@ All files are:
 
 ## 🎊 Project Summary
 
-**Total Files**: 39  
-**Total Lines**: 10,000+  
-**Components**: 11  
+**Total Files**: 49  
+**Total Lines**: 13,000+  
+**Components**: 12  
 **CSS Rules**: 500+  
-**Documentation**: 8 guides  
+**Documentation**: 11 guides  
 **Status**: ✅ Production Ready  
 
 ---
